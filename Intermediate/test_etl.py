@@ -26,7 +26,7 @@ class TransactionTest(unittest.TestCase):
         self.assertEqual(actual_nb_transactions, expected_nb_transactions,
                          f"Expected {expected_nb_transactions} transactions but got {actual_nb_transactions}.")
 
-    def TestTransformDataFrame(self):
+    def test_transform_dataFrame(self):
         """Test the transformation of the DataFrame."""
         transformed_df = transform_dataframe(self.df.copy(), self.transaction_date)
         self.assertIn('transaction_date', transformed_df.columns,
